@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Australia HECS/HELP Repayment Calculator 2024–25 | Tabutility</title>
+  <title>Australia HECS/HELP Repayment Calculator 2025–26 | Tabutility</title>
   <meta name="description" content="Free Australia HECS HELP repayment calculator for 2024-25. See your compulsory repayment amount, years to pay off, and total cost based on your income." />
   <meta name="keywords" content="HECS calculator, HELP debt calculator, Australia student loan, HECS repayment 2024, how much HECS do I pay" />
   <link rel="canonical" href="https://australia-hecs-calculator.tabutility.com/" />
@@ -20,36 +20,16 @@
   <div id="root"></div>
   <div id="ad-bottom"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
   <script type="text/babel">
+    //<![CDATA[
     const { useState } = React;
 
-    // 2024-25 HECS-HELP repayment thresholds
-    const THRESHOLDS = [
-      { min:0, max:54434, rate:0 },
-      { min:54435, max:62850, rate:0.01 },
-      { min:62851, max:66620, rate:0.02 },
-      { min:66621, max:70618, rate:0.025 },
-      { min:70619, max:74855, rate:0.03 },
-      { min:74856, max:79346, rate:0.035 },
-      { min:79347, max:83407, rate:0.04 },
-      { min:83408, max:88833, rate:0.045 },
-      { min:88834, max:94568, rate:0.05 },
-      { min:94569, max:100518, rate:0.055 },
-      { min:100519, max:106539, rate:0.06 },
-      { min:106540, max:112571, rate:0.065 },
-      { min:112572, max:119310, rate:0.07 },
-      { min:119311, max:126619, rate:0.075 },
-      { min:126620, max:134003, rate:0.08 },
-      { min:134004, max:141848, rate:0.085 },
-      { min:141849, max:150373, rate:0.09 },
-      { min:150374, max:159657, rate:0.095 },
-      { min:159658, max:Infinity, rate:0.10 },
-    ];
-
-    function getRepaymentRate(income) {
-      for (const t of THRESHOLDS) {
-        if (income >= t.min && income <= t.max) return t.rate;
-      }
-      return 0.10;
+    // Source: ATO — 2025-26 HECS/HELP repayment thresholds (new marginal rate system)
+    // From 2025-26 a NEW MARGINAL RATE system applies — repayment on income ABOVE each threshold boundary only.
+    function calcRepayment(income) {
+      if (income <= 67000) return 0;
+      if (income <= 125000) return (income - 67000) * 0.15;
+      if (income <= 179285) return 8700 + (income - 125000) * 0.17;
+      return income * 0.10; // flat 10% of total income above $179,285
     }
 
     function simulate(debt, income, growth, indexation) {
@@ -58,11 +38,11 @@
       const yearly = [];
       for (let yr = 1; yr <= 40; yr++) {
         const currentIncome = income * Math.pow(1 + growth/100, yr-1);
-        const rate = getRepaymentRate(currentIncome);
-        const repayment = Math.min(currentIncome * rate, remaining);
+        const repayment = Math.min(calcRepayment(currentIncome), remaining);
         remaining = (remaining * (1 + indexation/100)) - repayment;
+        const effectiveRate = currentIncome > 0 ? repayment / currentIncome : 0;
         totalPaid += repayment;
-        yearly.push({ yr, income: currentIncome, rate, repayment, balance: Math.max(0, remaining) });
+        yearly.push({ yr, income: currentIncome, effectiveRate, repayment, balance: Math.max(0, remaining) });
         if (remaining <= 0) return { totalPaid, years: yr, writtenOff: 0, paidOff: true, yearly };
       }
       return { totalPaid, years: 40, writtenOff: Math.max(0, remaining), paidOff: false, yearly };
@@ -80,12 +60,12 @@
 
       const calculate = () => {
         const d = parseFloat(debt)||0, i = parseFloat(income)||0;
-        const g = parseFloat(growth)||0, idx = parseFloat(indexation)||3.2;
-        const rate = getRepaymentRate(i);
-        const annualRepayment = i * rate;
+        const g = parseFloat(growth)||0, idx = parseFloat(indexation)||3.0;
+        const annualRepayment = calcRepayment(i);
         const monthlyRepayment = annualRepayment / 12;
+        const effectiveRate = i > 0 ? annualRepayment / i : 0;
         const sim = simulate(d, i, g, idx);
-        setResult({ debt:d, income:i, rate, annualRepayment, monthlyRepayment, ...sim });
+        setResult({ debt:d, income:i, effectiveRate, annualRepayment, monthlyRepayment, ...sim });
       };
 
       const inputStyle = { width:"100%", padding:"12px", border:"2px solid #bbf7d0", borderRadius:10, fontSize:16, boxSizing:"border-box", outline:"none" };
@@ -97,7 +77,7 @@
             <div style={{ textAlign:"center", marginBottom:32 }}>
               <div style={{ fontSize:48, marginBottom:8 }}>🎓</div>
               <h1 style={{ margin:0, fontSize:32, fontWeight:800, color:"#1a1a2e" }}>Australia HECS/HELP Calculator</h1>
-              <p style={{ margin:"8px 0 0", color:"#555", fontSize:16 }}>Compulsory repayments, payoff timeline & total cost — 2024–25</p>
+              <p style={{ margin:"8px 0 0", color:"#555", fontSize:16 }}>Compulsory repayments, payoff timeline & total cost — 2025–26</p>
             </div>
 
             <div style={{ background:"#fff", borderRadius:16, padding:28, boxShadow:"0 4px 24px rgba(0,0,0,0.08)", marginBottom:24 }}>
@@ -129,7 +109,7 @@
                     <input type="number" value={indexation} min="0" max="20" step="0.1" onChange={e=>setIndexation(e.target.value)} style={{ ...inputStyle, paddingRight:32 }} />
                     <span style={{ position:"absolute", right:12, top:"50%", transform:"translateY(-50%)", color:"#666" }}>%</span>
                   </div>
-                  <div style={{ fontSize:12, color:"#888", marginTop:4 }}>2024 indexation: 3.2% (CPI-linked)</div>
+                  <div style={{ fontSize:12, color:"#888", marginTop:4 }}>CPI-linked, set annually by ATO</div>
                 </div>
               </div>
               <button onClick={calculate} style={{ width:"100%", marginTop:24, padding:"16px", background:"linear-gradient(135deg, #059669, #0d9488)", color:"#fff", border:"none", borderRadius:12, fontSize:18, fontWeight:700, cursor:"pointer" }}>
@@ -142,7 +122,7 @@
                 {[
                   { label:"Annual Repayment", value:fmt(result.annualRepayment), color:"#059669", bg:"#f0fdf4" },
                   { label:"Monthly Repayment", value:fmt(result.monthlyRepayment), color:"#0d9488", bg:"#f0fdfa" },
-                  { label:"Repayment Rate", value:pct(result.rate), color:"#7c3aed", bg:"#faf5ff" },
+                  { label:"Effective Rate", value:pct(result.effectiveRate), color:"#7c3aed", bg:"#faf5ff" },
                   { label:"Years to Pay Off", value:result.paidOff ? `${result.years} yrs ✓` : `40 yrs (written off)`, color:result.paidOff?"#059669":"#d97706", bg:result.paidOff?"#f0fdf4":"#fffbeb" },
                   { label:"Total Paid", value:fmt(result.totalPaid), color:"#dc2626", bg:"#fff5f5" },
                 ].map((item,i)=>(
@@ -178,7 +158,7 @@
                   {[
                     { label:"Starting Debt", value:fmt(result.debt) },
                     { label:"Current Income", value:fmt(result.income) },
-                    { label:"Repayment Rate Now", value:pct(result.rate), color:"#059669" },
+                    { label:"Effective Rate", value:pct(result.effectiveRate), color:"#059669" },
                     { label:"Annual Repayment Now", value:fmt(result.annualRepayment) },
                     { label:"Total Repaid Over Lifetime", value:fmt(result.totalPaid), bold:true, color:"#dc2626" },
                     { label:"Amount Written Off", value:result.writtenOff>0?fmt(result.writtenOff):"£0 (fully paid!)", color:result.writtenOff>0?"#059669":"#7c3aed" },
@@ -192,29 +172,32 @@
                 </div>
               </div>
 
-              <div style={{ background:"#fff3cd", border:"1px solid #ffc107", borderRadius:12, padding:16, fontSize:13, color:"#664d03" }}>
-                <strong>Note:</strong> HECS-HELP is indexed annually to CPI (Jun quarter). 2024 indexation was 4.7%; legislation is proposing a cap at wage growth going forward. Repayments are made through your tax return — no manual payments required.
+              <div style={{ background:"#e0f2fe", border:"1px solid #38bdf8", borderRadius:12, padding:16, fontSize:13, color:"#0369a1" }}>
+                <strong>🆕 New from 2025–26:</strong> HECS repayments now use a marginal rate system — you only pay on income <em>above</em> each threshold, not a flat % of all earnings. This reduces repayments for many people. Repayments are made through your tax return automatically.
               </div>
             </>}
 
             <div style={{ background:"#fff", borderRadius:16, padding:24, boxShadow:"0 2px 12px rgba(0,0,0,0.06)", marginTop:24 }}>
-              <h3 style={{ margin:"0 0 14px", fontSize:16, fontWeight:700, color:"#1a1a2e" }}>📊 2024–25 Repayment Thresholds</h3>
+              <h3 style={{ margin:"0 0 14px", fontSize:16, fontWeight:700, color:"#1a1a2e" }}>📊 2025–26 Repayment Thresholds (Marginal System)</h3>
               <div style={{ overflowX:"auto" }}>
                 <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
-                  <thead><tr style={{ background:"#f0fdf4" }}>{["Income","Rate","Annual Repayment Example"].map(h=><th key={h} style={{ padding:"9px 12px", textAlign:"left", fontWeight:700 }}>{h}</th>)}</tr></thead>
+                  <thead><tr style={{ background:"#f0fdf4" }}>{["Repayment Income","Repayment on This Income"].map(h=><th key={h} style={{ padding:"9px 12px", textAlign:"left", fontWeight:700 }}>{h}</th>)}</tr></thead>
                   <tbody>
                     {[
-                      ["Below $54,435","Nil","$0"],["$54,435–$62,850","1%","~$585"],["$66,621–$70,618","2.5%","~$1,715"],["$79,347–$83,407","4%","~$3,270"],["$94,569–$100,518","5.5%","~$5,350"],["$112,572–$119,310","7%","~$8,080"],["$134,004–$141,848","8.5%","~$11,660"],["$159,658+","10%","$15,966+"],
+                      ["$0 – $67,000","Nil"],
+                      ["$67,001 – $125,000","15c for each $1 over $67,000"],
+                      ["$125,001 – $179,285","$8,700 plus 17c for each $1 over $125,000"],
+                      ["$179,286 and over","10% of total repayment income"],
                     ].map((row,i)=>(
                       <tr key={i} style={{ borderBottom:"1px solid #f1f3f5", background:i%2===0?"#fff":"#fafafa" }}>
                         <td style={{ padding:"9px 12px" }}>{row[0]}</td>
-                        <td style={{ padding:"9px 12px", color:row[1]==="Nil"?"#9ca3af":"#059669", fontWeight:600 }}>{row[1]}</td>
-                        <td style={{ padding:"9px 12px", color:"#555" }}>{row[2]}</td>
+                        <td style={{ padding:"9px 12px", color:i===0?"#9ca3af":"#059669", fontWeight:500 }}>{row[1]}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
+              <p style={{ margin:"10px 0 0", fontSize:12, color:"#888" }}>Source: ATO (ato.gov.au), last updated 30 June 2026.</p>
             </div>
           </div>
         </div>
@@ -222,6 +205,7 @@
     }
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<App />);
+    //]]>
   </script>
 </body>
 </html>
