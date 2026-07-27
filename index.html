@@ -1,211 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Australia HECS/HELP Repayment Calculator 2025–26 | Tabutility</title>
-  <meta name="description" content="Free Australia HECS HELP repayment calculator for 2024-25. See your compulsory repayment amount, years to pay off, and total cost based on your income." />
-  <meta name="keywords" content="HECS calculator, HELP debt calculator, Australia student loan, HECS repayment 2024, how much HECS do I pay" />
-  <link rel="canonical" href="https://australia-hecs-calculator.tabutility.com/" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box;}body{background:#f0fdf4;}.site-nav{background:#1a1a2e;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;}.site-nav a{color:#a5b4fc;text-decoration:none;font-size:14px;font-family:'Segoe UI',Arial,sans-serif;}.nav-brand{color:#fff;font-weight:700;font-size:16px;font-family:'Segoe UI',Arial,sans-serif;}#ad-top,#ad-bottom{text-align:center;padding:10px;background:#fff;}</style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Australia HECS / HELP Calculator 2024-25 — Tabutility</title>
+<meta name="description" content="Free Australian HECS-HELP repayment calculator 2024-25. Calculate your student loan repayments based on your income."/>
+<meta name="keywords" content="hecs calculator, help debt calculator, australia student loan repayment, hecs repayment 2024, hecs threshold australia"/>
+<link rel="canonical" href="https://australia-hecs-calculator.tabutility.com/"/>
+<link rel="alternate" hreflang="en-AU" href="https://australia-hecs-calculator.tabutility.com/"/>
+<link rel="alternate" hreflang="x-default" href="https://australia-hecs-calculator.tabutility.com/"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>"/>
+<meta property="og:title" content="Australia HECS / HELP Calculator 2024-25"/>
+<meta property="og:description" content="Calculate Australian HECS-HELP student loan repayments based on your income. Updated for 2024-25."/>
+<meta property="og:url" content="https://australia-hecs-calculator.tabutility.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Tabutility"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Australia HECS / HELP Calculator"/>
+<meta name="twitter:description" content="Calculate Australian HECS-HELP student loan repayments based on your income."/>
+<meta name="robots" content="index, follow"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Australia HECS / HELP Calculator","url":"https://australia-hecs-calculator.tabutility.com/","description":"Free Australian HECS-HELP repayment calculator 2024-25. Calculate your student loan repayments based on your income.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"International","item":"https://tabutility.com"},{"@type":"ListItem","position":3,"name":"Australia HECS / HELP Calculator","item":"https://australia-hecs-calculator.tabutility.com/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is HECS-HELP?","acceptedAnswer":{"@type":"Answer","text":"HECS-HELP is Australia's student loan scheme. Repayments are compulsory once your income exceeds the threshold."}},{"@type":"Question","name":"Is this up to date?","acceptedAnswer":{"@type":"Answer","text":"Yes — uses 2024-25 repayment thresholds."}},{"@type":"Question","name":"Is the HECS Calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no sign-up needed."}},{"@type":"Question","name":"Does it include indexation?","acceptedAnswer":{"@type":"Answer","text":"The payoff estimate includes approximate indexation."}}]}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh}
+nav{background:#1e293b;border-bottom:1px solid #334155;padding:14px 24px;display:flex;align-items:center;gap:16px}
+nav a{color:#94a3b8;text-decoration:none;font-size:14px}nav a:hover{color:#f1f5f9}
+nav .brand{color:#38bdf8;font-weight:700;font-size:18px}
+.ad-banner{background:#1e293b;border-bottom:1px solid #334155;padding:4px;text-align:center}
+#app{max-width:720px;margin:8px auto;padding:0 16px 40px}
+h1{font-size:26px;font-weight:800;margin:24px 0 4px;text-align:center}
+.subtitle{color:#94a3b8;text-align:center;font-size:14px;margin-bottom:24px}
+.badge{display:inline-block;background:#1e3a5f;color:#38bdf8;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;margin-left:8px;vertical-align:middle}
+.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:24px;margin-bottom:16px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:12px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.form-group input{width:100%;background:#0f172a;border:1px solid #334155;color:#f1f5f9;padding:12px 16px;border-radius:8px;font-size:18px;font-weight:600}
+.form-group input:focus{outline:none;border-color:#38bdf8}
+.calc-btn{width:100%;padding:14px;background:#38bdf8;color:#0f172a;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;transition:background .2s}
+.calc-btn:hover{background:#0ea5e9}
+.results{display:none}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:16px}
+.result-card{background:#0f172a;border:1px solid #334155;border-radius:10px;padding:16px;text-align:center}
+.result-card .rv{font-size:24px;font-weight:800;color:#38bdf8}
+.result-card .rl{font-size:12px;color:#94a3b8;margin-top:4px}
+.rate-badge{display:inline-block;background:rgba(56,189,248,0.15);border:1px solid rgba(56,189,248,0.3);color:#38bdf8;padding:6px 16px;border-radius:20px;font-size:14px;font-weight:700;margin-bottom:16px}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#0f172a;color:#94a3b8;text-align:left;padding:10px 12px;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+td{padding:9px 12px;border-bottom:1px solid rgba(255,255,255,0.06);color:#f1f5f9}
+tr.highlight-row td{background:rgba(56,189,248,0.08);color:#38bdf8;font-weight:700}
+tr:last-child td{border-bottom:none}
+.info-box{background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.2);border-radius:10px;padding:14px 16px;font-size:13px;color:#94a3b8;margin-top:12px;line-height:1.6}
+</style>
 </head>
 <body>
-  <nav class="site-nav"><span class="nav-brand">⚡ Tabutility</span><a href="https://tabutility.com">← All Tools</a></nav>
-  <div id="ad-top"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-  <div id="root"></div>
-  <div id="ad-bottom"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-  <script type="text/babel">
-    //<![CDATA[
-    const { useState } = React;
+<nav><span class="brand">⚡ Tabutility</span><a href="https://tabutility.com">← All Tools</a></nav>
+<div class="ad-banner"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<div id="app">
+  <h1>🎓 HECS / HELP Calculator <span class="badge">2024-25</span></h1>
+  <p class="subtitle">Calculate your compulsory HECS-HELP repayment based on your annual income.</p>
 
-    // Source: ATO — 2025-26 HECS/HELP repayment thresholds (new marginal rate system)
-    // From 2025-26 a NEW MARGINAL RATE system applies — repayment on income ABOVE each threshold boundary only.
-    function calcRepayment(income) {
-      if (income <= 67000) return 0;
-      if (income <= 125000) return (income - 67000) * 0.15;
-      if (income <= 179285) return 8700 + (income - 125000) * 0.17;
-      return income * 0.10; // flat 10% of total income above $179,285
+  <div class="card">
+    <div class="form-group">
+      <label>HECS / HELP Debt (A$)</label>
+      <input type="number" id="debt" value="25000" placeholder="e.g. 25000" min="0"/>
+    </div>
+    <div class="form-group">
+      <label>Annual Income (A$)</label>
+      <input type="number" id="income" value="70000" placeholder="e.g. 70000" min="0"/>
+    </div>
+    <button class="calc-btn" onclick="calculate()">Calculate Repayment</button>
+  </div>
+
+  <div class="results" id="results">
+    <div style="text-align:center;margin-bottom:12px">
+      <span class="rate-badge" id="rateBadge">Repayment Rate: 3%</span>
+    </div>
+    <div class="result-grid">
+      <div class="result-card">
+        <div class="rv" id="annualRep">—</div>
+        <div class="rl">Annual Repayment</div>
+      </div>
+      <div class="result-card">
+        <div class="rv" id="monthlyRep">—</div>
+        <div class="rl">Monthly Repayment</div>
+      </div>
+      <div class="result-card">
+        <div class="rv" id="yearsOff">—</div>
+        <div class="rl">Est. Years to Pay Off</div>
+      </div>
+    </div>
+    <div class="info-box" id="infoBox"></div>
+  </div>
+
+  <div class="card" style="margin-top:8px">
+    <div style="font-size:13px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">2024-25 Repayment Rate Table</div>
+    <div class="table-wrap">
+      <table id="rateTable">
+        <thead><tr><th>Annual Income</th><th>Repayment Rate</th></tr></thead>
+        <tbody id="rateTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:24px;margin-bottom:8px;padding:0 16px">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+      <a href="https://australian-tax-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Australian Tax Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">International</div>
+      </a>
+      <a href="https://australia-super.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Australia Super Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">International</div>
+      </a>
+      <a href="https://australia-stamp-duty.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Stamp Duty Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">International</div>
+      </a>
+      <a href="https://gst-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">GST Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">International</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:8px;margin-bottom:24px;padding:0 16px">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Frequently Asked Questions</h2>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">What is HECS-HELP?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">HECS-HELP is Australia's student loan scheme. Repayments are compulsory once your income exceeds the minimum threshold ($54,435 in 2024-25).</div>
+    </div>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is this up to date?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — uses 2024-25 repayment thresholds from the Australian Taxation Office.</div>
+    </div>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is this free?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — completely free, no sign-up needed.</div>
+    </div>
+    <div style="padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Does it include indexation?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">The payoff estimate includes approximate indexation of ~4% per year on the outstanding debt.</div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:8px">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+
+<script>
+const BANDS = [
+  [0, 54434, 0],
+  [54435, 62849, 1],
+  [62850, 66152, 2],
+  [66153, 70468, 2.5],
+  [70469, 74981, 3],
+  [74982, 79911, 3.5],
+  [79912, 84481, 4],
+  [84482, 90080, 4.5],
+  [90081, 95552, 5],
+  [95553, 101588, 5.5],
+  [101589, 107539, 6],
+  [107540, 114398, 6.5],
+  [114399, 122728, 7],
+  [122729, 130093, 7.5],
+  [130094, 137897, 8],
+  [137898, 146133, 8.5],
+  [146134, 155028, 9],
+  [155029, 159664, 9.5],
+  [159665, Infinity, 10]
+];
+
+function fmtAUD(n) { return 'A$' + Math.round(n).toLocaleString(); }
+
+function getRate(income) {
+  for (const [low, high, rate] of BANDS) {
+    if (income >= low && income <= high) return rate;
+  }
+  return 10;
+}
+
+function calculate() {
+  const debt = parseFloat(document.getElementById('debt').value) || 0;
+  const income = parseFloat(document.getElementById('income').value) || 0;
+  const rate = getRate(income);
+  const annualRep = income * rate / 100;
+  const monthlyRep = annualRep / 12;
+
+  // Estimate years to pay off with ~4% indexation
+  let remaining = debt;
+  let years = 0;
+  const INDEXATION = 0.04;
+  if (annualRep <= 0) {
+    document.getElementById('yearsOff').textContent = 'N/A';
+  } else {
+    while (remaining > 0 && years < 100) {
+      remaining = remaining * (1 + INDEXATION) - annualRep;
+      years++;
     }
+    document.getElementById('yearsOff').textContent = years >= 100 ? '100+' : years + ' yrs';
+  }
 
-    function simulate(debt, income, growth, indexation) {
-      let remaining = debt;
-      let totalPaid = 0;
-      const yearly = [];
-      for (let yr = 1; yr <= 40; yr++) {
-        const currentIncome = income * Math.pow(1 + growth/100, yr-1);
-        const repayment = Math.min(calcRepayment(currentIncome), remaining);
-        remaining = (remaining * (1 + indexation/100)) - repayment;
-        const effectiveRate = currentIncome > 0 ? repayment / currentIncome : 0;
-        totalPaid += repayment;
-        yearly.push({ yr, income: currentIncome, effectiveRate, repayment, balance: Math.max(0, remaining) });
-        if (remaining <= 0) return { totalPaid, years: yr, writtenOff: 0, paidOff: true, yearly };
-      }
-      return { totalPaid, years: 40, writtenOff: Math.max(0, remaining), paidOff: false, yearly };
-    }
+  document.getElementById('rateBadge').textContent = rate === 0 ? 'Below threshold — no repayment required' : 'Repayment Rate: ' + rate + '%';
+  document.getElementById('annualRep').textContent = fmtAUD(annualRep);
+  document.getElementById('monthlyRep').textContent = fmtAUD(monthlyRep);
 
-    const fmt = n => "$" + Math.round(n).toLocaleString();
-    const pct = n => (n*100).toFixed(1)+"%";
+  if (rate === 0) {
+    document.getElementById('infoBox').textContent = 'Your income ($' + income.toLocaleString() + ') is below the minimum repayment threshold ($54,435). No compulsory repayment is required this year. Your debt will be indexed annually.';
+  } else {
+    document.getElementById('infoBox').textContent = 'At an income of A$' + income.toLocaleString() + ', your compulsory repayment rate is ' + rate + '%. Your annual repayment is A$' + Math.round(annualRep).toLocaleString() + '. Payoff estimate assumes ~4% annual indexation.';
+  }
+  document.getElementById('results').style.display = 'block';
+  highlightTable(income);
+}
 
-    function App() {
-      const [debt, setDebt] = useState("35000");
-      const [income, setIncome] = useState("70000");
-      const [growth, setGrowth] = useState("3");
-      const [indexation, setIndexation] = useState("3.2");
-      const [result, setResult] = useState(null);
+function buildTable() {
+  const tbody = document.getElementById('rateTableBody');
+  BANDS.forEach(([low, high, rate]) => {
+    const tr = document.createElement('tr');
+    const lowStr = low === 0 ? 'Below A$54,435' : 'A$' + low.toLocaleString() + (high === Infinity ? '+' : ' – A$' + high.toLocaleString());
+    tr.innerHTML = `<td>${lowStr}</td><td>${rate === 0 ? 'No repayment' : rate + '%'}</td>`;
+    tr.dataset.low = low;
+    tr.dataset.high = high === Infinity ? 999999999 : high;
+    tbody.appendChild(tr);
+  });
+}
 
-      const calculate = () => {
-        const d = parseFloat(debt)||0, i = parseFloat(income)||0;
-        const g = parseFloat(growth)||0, idx = parseFloat(indexation)||3.0;
-        const annualRepayment = calcRepayment(i);
-        const monthlyRepayment = annualRepayment / 12;
-        const effectiveRate = i > 0 ? annualRepayment / i : 0;
-        const sim = simulate(d, i, g, idx);
-        setResult({ debt:d, income:i, effectiveRate, annualRepayment, monthlyRepayment, ...sim });
-      };
+function highlightTable(income) {
+  document.querySelectorAll('#rateTableBody tr').forEach(tr => {
+    const low = parseFloat(tr.dataset.low);
+    const high = parseFloat(tr.dataset.high);
+    tr.classList.toggle('highlight-row', income >= low && income <= high);
+  });
+}
 
-      const inputStyle = { width:"100%", padding:"12px", border:"2px solid #bbf7d0", borderRadius:10, fontSize:16, boxSizing:"border-box", outline:"none" };
-      const labelStyle = { display:"block", fontWeight:600, marginBottom:6, color:"#333" };
-
-      return (
-        <div style={{ fontFamily:"'Segoe UI',Arial,sans-serif", background:"#f0fdf4", minHeight:"100vh", padding:"20px" }}>
-          <div style={{ maxWidth:820, margin:"0 auto" }}>
-            <div style={{ textAlign:"center", marginBottom:32 }}>
-              <div style={{ fontSize:48, marginBottom:8 }}>🎓</div>
-              <h1 style={{ margin:0, fontSize:32, fontWeight:800, color:"#1a1a2e" }}>Australia HECS/HELP Calculator</h1>
-              <p style={{ margin:"8px 0 0", color:"#555", fontSize:16 }}>Compulsory repayments, payoff timeline & total cost — 2025–26</p>
-            </div>
-
-            <div style={{ background:"#fff", borderRadius:16, padding:28, boxShadow:"0 4px 24px rgba(0,0,0,0.08)", marginBottom:24 }}>
-              <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(190px,1fr))", gap:20 }}>
-                <div>
-                  <label style={labelStyle}>HECS/HELP Debt</label>
-                  <div style={{ position:"relative" }}>
-                    <span style={{ position:"absolute", left:12, top:"50%", transform:"translateY(-50%)", color:"#666", fontWeight:600 }}>$</span>
-                    <input type="number" value={debt} onChange={e=>setDebt(e.target.value)} style={{ ...inputStyle, paddingLeft:28 }} />
-                  </div>
-                </div>
-                <div>
-                  <label style={labelStyle}>Annual Income (AUD)</label>
-                  <div style={{ position:"relative" }}>
-                    <span style={{ position:"absolute", left:12, top:"50%", transform:"translateY(-50%)", color:"#666", fontWeight:600 }}>$</span>
-                    <input type="number" value={income} onChange={e=>setIncome(e.target.value)} style={{ ...inputStyle, paddingLeft:28 }} />
-                  </div>
-                </div>
-                <div>
-                  <label style={labelStyle}>Annual Salary Growth (%)</label>
-                  <div style={{ position:"relative" }}>
-                    <input type="number" value={growth} min="0" max="20" onChange={e=>setGrowth(e.target.value)} style={{ ...inputStyle, paddingRight:32 }} />
-                    <span style={{ position:"absolute", right:12, top:"50%", transform:"translateY(-50%)", color:"#666" }}>%</span>
-                  </div>
-                </div>
-                <div>
-                  <label style={labelStyle}>Indexation Rate (%)</label>
-                  <div style={{ position:"relative" }}>
-                    <input type="number" value={indexation} min="0" max="20" step="0.1" onChange={e=>setIndexation(e.target.value)} style={{ ...inputStyle, paddingRight:32 }} />
-                    <span style={{ position:"absolute", right:12, top:"50%", transform:"translateY(-50%)", color:"#666" }}>%</span>
-                  </div>
-                  <div style={{ fontSize:12, color:"#888", marginTop:4 }}>CPI-linked, set annually by ATO</div>
-                </div>
-              </div>
-              <button onClick={calculate} style={{ width:"100%", marginTop:24, padding:"16px", background:"linear-gradient(135deg, #059669, #0d9488)", color:"#fff", border:"none", borderRadius:12, fontSize:18, fontWeight:700, cursor:"pointer" }}>
-                Calculate HECS Repayments
-              </button>
-            </div>
-
-            {result && <>
-              <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(160px,1fr))", gap:16, marginBottom:24 }}>
-                {[
-                  { label:"Annual Repayment", value:fmt(result.annualRepayment), color:"#059669", bg:"#f0fdf4" },
-                  { label:"Monthly Repayment", value:fmt(result.monthlyRepayment), color:"#0d9488", bg:"#f0fdfa" },
-                  { label:"Effective Rate", value:pct(result.effectiveRate), color:"#7c3aed", bg:"#faf5ff" },
-                  { label:"Years to Pay Off", value:result.paidOff ? `${result.years} yrs ✓` : `40 yrs (written off)`, color:result.paidOff?"#059669":"#d97706", bg:result.paidOff?"#f0fdf4":"#fffbeb" },
-                  { label:"Total Paid", value:fmt(result.totalPaid), color:"#dc2626", bg:"#fff5f5" },
-                ].map((item,i)=>(
-                  <div key={i} style={{ background:item.bg, borderRadius:14, padding:18, textAlign:"center", border:`2px solid ${item.color}22` }}>
-                    <div style={{ fontSize:20, fontWeight:800, color:item.color }}>{item.value}</div>
-                    <div style={{ fontSize:12, color:"#555", marginTop:4, fontWeight:500 }}>{item.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:20, marginBottom:24 }}>
-                <div style={{ background:"#fff", borderRadius:16, padding:24, boxShadow:"0 2px 12px rgba(0,0,0,0.06)" }}>
-                  <h3 style={{ margin:"0 0 16px", fontSize:16, fontWeight:700, color:"#1a1a2e" }}>Year-by-Year (first 10 years)</h3>
-                  <div style={{ overflowX:"auto" }}>
-                    <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
-                      <thead><tr style={{ background:"#f0fdf4" }}>{["Yr","Income","Rate","Repayment","Balance"].map(h=><th key={h} style={{ padding:"8px 8px", textAlign:"left", fontWeight:700, color:"#333", whiteSpace:"nowrap" }}>{h}</th>)}</tr></thead>
-                      <tbody>
-                        {result.yearly.slice(0,10).map((y,i)=>(
-                          <tr key={i} style={{ borderBottom:"1px solid #f1f3f5" }}>
-                            <td style={{ padding:"7px 8px" }}>{y.yr}</td>
-                            <td style={{ padding:"7px 8px" }}>{fmt(y.income)}</td>
-                            <td style={{ padding:"7px 8px", color:"#059669", fontWeight:600 }}>{pct(y.rate)}</td>
-                            <td style={{ padding:"7px 8px" }}>{fmt(y.repayment)}</td>
-                            <td style={{ padding:"7px 8px", fontWeight:600, color:y.balance<result.debt*0.3?"#059669":"#333" }}>{fmt(y.balance)}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div style={{ background:"#fff", borderRadius:16, padding:24, boxShadow:"0 2px 12px rgba(0,0,0,0.06)" }}>
-                  <h3 style={{ margin:"0 0 16px", fontSize:16, fontWeight:700, color:"#1a1a2e" }}>Summary</h3>
-                  {[
-                    { label:"Starting Debt", value:fmt(result.debt) },
-                    { label:"Current Income", value:fmt(result.income) },
-                    { label:"Effective Rate", value:pct(result.effectiveRate), color:"#059669" },
-                    { label:"Annual Repayment Now", value:fmt(result.annualRepayment) },
-                    { label:"Total Repaid Over Lifetime", value:fmt(result.totalPaid), bold:true, color:"#dc2626" },
-                    { label:"Amount Written Off", value:result.writtenOff>0?fmt(result.writtenOff):"£0 (fully paid!)", color:result.writtenOff>0?"#059669":"#7c3aed" },
-                    { label:result.paidOff?"Paid Off In":"Written Off After", value:`${result.years} years`, bold:true, border:true, color:result.paidOff?"#059669":"#d97706" },
-                  ].map((row,i)=>(
-                    <div key={i} style={{ display:"flex", justifyContent:"space-between", padding:"9px 0", borderTop:row.border?"2px solid #e9ecef":"1px solid #f1f3f5" }}>
-                      <span style={{ fontSize:14, color:"#444", fontWeight:row.bold?700:400 }}>{row.label}</span>
-                      <span style={{ fontSize:14, fontWeight:row.bold?700:600, color:row.color||"#222" }}>{row.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div style={{ background:"#e0f2fe", border:"1px solid #38bdf8", borderRadius:12, padding:16, fontSize:13, color:"#0369a1" }}>
-                <strong>🆕 New from 2025–26:</strong> HECS repayments now use a marginal rate system — you only pay on income <em>above</em> each threshold, not a flat % of all earnings. This reduces repayments for many people. Repayments are made through your tax return automatically.
-              </div>
-            </>}
-
-            <div style={{ background:"#fff", borderRadius:16, padding:24, boxShadow:"0 2px 12px rgba(0,0,0,0.06)", marginTop:24 }}>
-              <h3 style={{ margin:"0 0 14px", fontSize:16, fontWeight:700, color:"#1a1a2e" }}>📊 2025–26 Repayment Thresholds (Marginal System)</h3>
-              <div style={{ overflowX:"auto" }}>
-                <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
-                  <thead><tr style={{ background:"#f0fdf4" }}>{["Repayment Income","Repayment on This Income"].map(h=><th key={h} style={{ padding:"9px 12px", textAlign:"left", fontWeight:700 }}>{h}</th>)}</tr></thead>
-                  <tbody>
-                    {[
-                      ["$0 – $67,000","Nil"],
-                      ["$67,001 – $125,000","15c for each $1 over $67,000"],
-                      ["$125,001 – $179,285","$8,700 plus 17c for each $1 over $125,000"],
-                      ["$179,286 and over","10% of total repayment income"],
-                    ].map((row,i)=>(
-                      <tr key={i} style={{ borderBottom:"1px solid #f1f3f5", background:i%2===0?"#fff":"#fafafa" }}>
-                        <td style={{ padding:"9px 12px" }}>{row[0]}</td>
-                        <td style={{ padding:"9px 12px", color:i===0?"#9ca3af":"#059669", fontWeight:500 }}>{row[1]}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p style={{ margin:"10px 0 0", fontSize:12, color:"#888" }}>Source: ATO (ato.gov.au), last updated 30 June 2026.</p>
-            </div>
-          </div>
-        </div>
-      );
-    }
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
-    //]]>
-  </script>
+buildTable();
+</script>
 </body>
 </html>
