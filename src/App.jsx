@@ -64,7 +64,7 @@ export default function AustraliaHECS() {
           <p style={{ margin: "8px 0 0", color: "#555", fontSize: 16 }}>Compulsory repayments, payoff timeline & total cost — 2025–26</p>
         </div>
 
-        <div style={{ background: "#e0f2fe", border: "1px solid #38bdf8", borderRadius: 12, padding: 14, marginBottom: 20, fontSize: 13, color: "#0369a1" }}>
+        <div style={{ background: "#e0f2fe", border: "1px solid #0f172a", borderRadius: 12, padding: 14, marginBottom: 20, fontSize: 13, color: "#0369a1" }}>
           <strong>🆕 New from 2025–26:</strong> HECS repayments now use a <strong>marginal rate system</strong> — you only pay on income <em>above</em> each threshold, not a flat % of all earnings. This significantly reduces repayments for many people.
         </div>
 
