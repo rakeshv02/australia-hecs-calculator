@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-<meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Australia HECS / HELP Calculator 2024-25 — Tabutility</title>
 <meta name="description" content="Free Australian HECS-HELP repayment calculator 2024-25. Calculate your student loan repayments based on your income."/>
@@ -69,8 +67,6 @@ tr:last-child td{border-bottom:none}
 nav .brand{color:#fff}
 nav a:hover{color:#818cf8}
 input:focus,select:focus,textarea:focus{border-color:#818cf8!important}
-/* AdSense not yet approved: hide all ad frames (container min-height still reserves space). Remove these two lines after approval. */
-ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibility:hidden!important}
 </style>
 <script type="application/ld+json">
     {
@@ -93,12 +89,11 @@ ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibilit
     }
     }
     </script>
-  <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="noindex, follow">
 </head>
 <body>
 <nav><span class="brand">⚡ Tabutility</span><a href="https://tabutility.com">← All Tools</a></nav>
 <div class="hub-link" style="max-width:900px;margin:12px auto 0;padding:0 16px"><a href="https://tabutility.com/australia-tax/" style="color:#4f46e5;text-decoration:none;font-size:14px">← All Australia Tax Calculators</a></div>
-<div class="ad-banner"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 <div id="app">
   <h1>🎓 HECS / HELP Calculator <span class="badge">2024-25</span></h1>
   <p class="subtitle">Calculate your compulsory HECS-HELP repayment based on your annual income.</p>
@@ -209,11 +204,6 @@ ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibilit
   </div>
 </div>
 
-<div style="text-align:center;padding:8px">
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-</div>
-
 <script>
 const BANDS = [
   [0, 54434, 0],
@@ -301,27 +291,6 @@ function highlightTable(income) {
 }
 
 buildTable();
-</script>
-<script>
-(function(){
-  var ins=document.querySelectorAll('.adsbygoogle:not([data-lazy-done])');
-  var belowFold=Array.from(ins).slice(1);
-  if(!belowFold.length)return;
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(entries,obs){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          (adsbygoogle=window.adsbygoogle||[]).push({});
-          e.target.setAttribute('data-lazy-done','1');
-          obs.unobserve(e.target);
-        }
-      });
-    },{rootMargin:'200px'});
-    belowFold.forEach(function(el){io.observe(el);});
-  } else {
-    belowFold.forEach(function(){(adsbygoogle=window.adsbygoogle||[]).push({});});
-  }
-})();
 </script>
 <footer style="background:#1a1a2e;margin-top:48px;padding:28px 24px;text-align:center;font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:13px;color:#94a3b8;line-height:1.8">
 <div style="font-weight:700;color:#fff;font-size:15px">⚡ Tabutility</div>
